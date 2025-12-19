@@ -1,55 +1,30 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- Sync Impact Report (Initial Creation):
+Version: 1.0.0 (new)
+Affected Files: docusaurus.config.js, sidebars.js, all /docs/*.md files (to be created), root README.
+No conflicts detected. -->
+
+# Physical AI & Humanoid Robotics: An Online Technical Textbook Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Educational Clarity and Accessibility
+Prioritize beginner-friendly language: Use simple explanations, real-world analogies (e.g., ROS 2 as the "nervous system" of a robot), and gradual introduction of technical terms. Concept-first approach: Explain ideas before introducing specific tools or code. Avoid overwhelming details: Limit code snippets, complex math, or advanced topics unless essential for understanding.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Professional Structure and Flow
+Strictly adhere to the predefined course outline: Include all specified sections (Preface/Introduction, Why Physical AI Matters, Course Overview, Modules 1–4, Capstone Project, Weekly Breakdown, Learning Outcomes, Assessments, Hardware Requirements). Logical progression: Build from basics (e.g., ROS 2 fundamentals) to advanced (e.g., Vision-Language-Action models) and integration (Capstone). Hierarchical organization: Use Docusaurus categories for modules and sub-sections for chapters.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Content Quality and Consistency
+Conceptual and non-technical tone: Focus on "why" and "what" rather than deep implementation. Where tools are mentioned (e.g., ROS 2, Gazebo, NVIDIA Isaac), emphasize purpose and high-level usage. Neutral and advisory: Avoid marketing language (e.g., no hype about tools or companies). Use simple, advisory tone for practical sections like Hardware Requirements. Inclusivity: Target students, hobbyists, and professionals new to Physical AI; highlight transformative potential (e.g., skill enhancement, not job loss).
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Technical Implementation Standards
+Built with Docusaurus: Use Markdown/MDX files in a /docs folder with folder-based categories for hierarchy. Configure sidebars.js for nested navigation matching the outline. Single-instance docs plugin: No versioning initially; focus on current content. Readability enhancements: Include headings, lists, admonitions (e.g., notes, warnings), and optional diagrams (text-based or described for future images). SEO and usability: Clear titles, intros, and summaries per page.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
-
-### [PRINCIPLE_6_NAME]
-
-
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Compliance and Review
+All content must align with this constitution. Before completion: Validate against checklist (all modules included, outline followed, clear explanations, logical flow, end-to-end capstone). Future expansions: Use SpecifyPlus workflows if extending (e.g., new features as specs).
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+Amendments require explicit updates with semantic versioning (MAJOR for structural changes, MINOR for new content additions, PATCH for corrections).
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+All content must align with this constitution. Amendments require explicit updates with semantic versioning (MAJOR for structural changes, MINOR for new content additions, PATCH for corrections). Before completion: Validate against checklist (all modules included, outline followed, clear explanations, logical flow, end-to-end capstone).
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-19 | **Last Amended**: 2025-12-19

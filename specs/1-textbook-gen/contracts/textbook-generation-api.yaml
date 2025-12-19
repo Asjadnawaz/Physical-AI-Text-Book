@@ -1,0 +1,258 @@
+openapi: 3.0.0
+info:
+  title: Textbook Generation API
+  description: API for generating textbooks from structured content
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+    description: Development server
+paths:
+  /api/textbooks/generate:
+    post:
+      summary: Generate a textbook from structured content
+      description: Creates a textbook with chapters and sections from provided content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TextbookInput'
+      responses:
+        '200':
+          description: Textbook generated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TextbookOutput'
+        '400':
+          description: Invalid input data
+        '500':
+          description: Internal server error
+  /api/textbooks/export:
+    post:
+      summary: Export textbook in specified format
+      description: Exports a generated textbook in the requested format (PDF, HTML, EPUB)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExportRequest'
+      responses:
+        '200':
+          description: Textbook exported successfully
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        '400':
+          description: Invalid export parameters
+        '404':
+          description: Textbook not found
+        '500':
+          description: Internal server error
+  /api/textbooks/validate:
+    post:
+      summary: Validate textbook structure
+      description: Validates that the textbook content meets structural requirements
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TextbookInput'
+      responses:
+        '200':
+          description: Validation successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationResult'
+        '400':
+          description: Validation failed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationResult'
+        '500':
+          description: Internal server error
+
+components:
+  schemas:
+    TextbookInput:
+      type: object
+      required:
+        - title
+        - chapters
+      properties:
+        title:
+          type: string
+          description: Title of the textbook
+          example: "Introduction to Physical AI"
+        author:
+          type: string
+          description: Author of the textbook
+          example: "Dr. Jane Smith"
+        subject:
+          type: string
+          description: Subject area of the textbook
+          example: "Physical AI"
+        chapters:
+          type: array
+          items:
+            $ref: '#/components/schemas/ChapterInput'
+        styling:
+          $ref: '#/components/schemas/StylingOptions'
+
+    ChapterInput:
+      type: object
+      required:
+        - number
+        - title
+        - sections
+      properties:
+        number:
+          type: integer
+          description: Sequential number of the chapter
+          example: 1
+        title:
+          type: string
+          description: Title of the chapter
+          example: "What is Physical AI?"
+        description:
+          type: string
+          description: Brief description of the chapter
+          example: "An introduction to Physical AI concepts"
+        sections:
+          type: array
+          items:
+            $ref: '#/components/schemas/SectionInput'
+
+    SectionInput:
+      type: object
+      required:
+        - number
+        - title
+        - content
+      properties:
+        number:
+          type: integer
+          description: Sequential number of the section
+          example: 1
+        title:
+          type: string
+          description: Title of the section
+          example: "Definition and Concepts"
+        content:
+          type: string
+          description: Content of the section
+          example: "Physical AI is a field that combines artificial intelligence with physical systems..."
+        section_type:
+          type: string
+          description: Type of section
+          enum: [text, exercise, example, note]
+          example: "text"
+        content_blocks:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContentBlockInput'
+
+    ContentBlockInput:
+      type: object
+      required:
+        - type
+        - data
+      properties:
+        type:
+          type: string
+          description: Type of content block
+          enum: [text, image, code, exercise]
+          example: "text"
+        data:
+          type: string
+          description: Content data
+          example: "This is an example of content block data"
+        position:
+          type: integer
+          description: Position in the section
+          example: 1
+
+    StylingOptions:
+      type: object
+      properties:
+        theme:
+          type: string
+          description: Theme for the textbook
+          example: "academic"
+        custom_css:
+          type: string
+          description: Custom CSS for styling
+          example: "h1 { color: blue; }"
+        font_family:
+          type: string
+          description: Font family to use
+          example: "Times New Roman"
+        page_size:
+          type: string
+          description: Page size for PDF export
+          example: "A4"
+
+    TextbookOutput:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the generated textbook
+          example: "tbk_123456789"
+        title:
+          type: string
+          description: Title of the textbook
+          example: "Introduction to Physical AI"
+        generated_at:
+          type: string
+          format: date-time
+          description: When the textbook was generated
+          example: "2025-12-19T10:30:00Z"
+        status:
+          type: string
+          description: Status of the generation process
+          example: "completed"
+
+    ExportRequest:
+      type: object
+      required:
+        - textbook_id
+        - format
+      properties:
+        textbook_id:
+          type: string
+          description: ID of the textbook to export
+          example: "tbk_123456789"
+        format:
+          type: string
+          description: Export format
+          enum: [pdf, html, epub]
+          example: "pdf"
+        styling:
+          $ref: '#/components/schemas/StylingOptions'
+
+    ValidationResult:
+      type: object
+      properties:
+        valid:
+          type: boolean
+          description: Whether the validation passed
+          example: true
+        errors:
+          type: array
+          items:
+            type: string
+            description: Validation error messages
+          example: []
+        warnings:
+          type: array
+          items:
+            type: string
+            description: Validation warning messages
+          example: []
