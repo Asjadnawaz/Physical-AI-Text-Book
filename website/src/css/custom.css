@@ -1,0 +1,235 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-code-font-size: 95%;
+
+  /* Custom textbook variables */
+  --textbook-accent-color: #7e57c2;
+  --textbook-secondary-color: #42a5f5;
+  --textbook-success-color: #66bb6a;
+  --textbook-warning-color: #ffca28;
+  --textbook-danger-color: #ef5350;
+
+  /* Typography */
+  --textbook-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --textbook-line-height: 1.7;
+}
+
+.docusaurus-highlight-code-button {
+  background: #1b1d1f;
+  border: 1px solid #303846;
+  border-radius: var(--ifm-global-radius);
+  color: #e6e6e6;
+  padding: 0.4rem 0.5rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+}
+
+.docusaurus-highlight-code-button:hover {
+  background: #0d0d0d;
+}
+
+/* Custom styles for the Physical AI textbook */
+.textbook-header {
+  background: linear-gradient(135deg, var(--textbook-secondary-color) 0%, var(--textbook-accent-color) 100%);
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.textbook-intro-card {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-left: 4px solid var(--ifm-color-primary);
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.textbook-key-concept {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid var(--textbook-accent-color);
+}
+
+.textbook-learning-objectives {
+  background-color: #e8f5e9;
+  border-left: 4px solid var(--textbook-success-color);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+}
+
+.textbook-chapter-summary {
+  background-color: #fff8e1;
+  border: 1px solid #ffecb3;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.textbook-aside {
+  float: right;
+  width: 30%;
+  margin-left: 1rem;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 3px solid var(--textbook-secondary-color);
+  font-size: 0.9em;
+}
+
+.textbook-definition {
+  border-left: 4px solid var(--textbook-secondary-color);
+  background-color: #e3f2fd;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.textbook-theorem {
+  border-left: 4px solid var(--textbook-accent-color);
+  background-color: #f3e5f5;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
+  font-style: italic;
+}
+
+.textbook-proof {
+  border-left: 2px solid var(--textbook-secondary-color);
+  padding-left: 1rem;
+  margin-left: 1rem;
+  font-size: 0.95em;
+}
+
+/* Improve readability for textbook content */
+.markdown h1, .markdown h2, .markdown h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.markdown h1 {
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+  padding-bottom: 0.5rem;
+}
+
+.markdown h2 {
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding-bottom: 0.3rem;
+}
+
+.markdown p {
+  line-height: var(--textbook-line-height);
+  margin-bottom: 1rem;
+}
+
+.markdown ul, .markdown ol {
+  margin-bottom: 1rem;
+}
+
+/* Custom admonitions for textbook */
+.admonition.admonition-caution {
+  border-color: var(--textbook-warning-color);
+  background-color: #fff8e1;
+}
+
+.admonition.admonition-important {
+  border-color: var(--textbook-secondary-color);
+  background-color: #e3f2fd;
+}
+
+.admonition.admonition-tip {
+  border-color: var(--textbook-success-color);
+  background-color: #e8f5e9;
+}
+
+.admonition.admonition-note {
+  border-color: var(--textbook-accent-color);
+  background-color: #f3e5f5;
+}
+
+/* Improve table styling for textbook content */
+.markdown table {
+  display: table;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.markdown table th, .markdown table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid var(--ifm-table-border-color);
+}
+
+.markdown table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid var(--ifm-table-border-color);
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+/* Code block enhancements */
+.prism-code {
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+}
+
+/* Responsive adjustments for textbook content */
+@media (max-width: 996px) {
+  .textbook-header {
+    padding: 2rem 0;
+  }
+
+  .textbook-aside {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Navigation enhancements */
+.menu__list-item-collapsible .menu__link--sublist {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+/* Footer enhancements */
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Search enhancements */
+.navbar__search-input {
+  border-radius: 4px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+/* Breadcrumb enhancements */
+.theme-edit-this-page {
+  color: var(--textbook-accent-color);
+}
+
+.theme-edit-this-page:hover {
+  color: var(--textbook-secondary-color);
+}
