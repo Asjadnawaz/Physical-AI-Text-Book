@@ -77,7 +77,6 @@ apidoc/
 
 # Docusaurus specific
 website/i18n/
-website/static/
 website/versioned_docs/
 website/versioned_sidebars/
 website/translated_docs/
