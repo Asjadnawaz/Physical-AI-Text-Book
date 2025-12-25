@@ -9,7 +9,14 @@
       "Bash(npx docusaurus start)",
       "Bash(npx docusaurus clear)",
       "Bash(npx docusaurus start --port 3001)",
-      "Bash(find website/docs -name \"*.md\" -exec wc -w {} ;)"
+      "Bash(find website/docs -name \"*.md\" -exec wc -w {} ;)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/setup-plan.ps1\" -Json)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/create-new-feature.ps1\" -Json \"update in docasuaurus texbook  for RAG chatbot in constitution\" -Number 3 -ShortName \"rag-chatbot-integration\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/create-new-feature.ps1\" -FeatureDescription \"update in docasuaurus texbook  for RAG chatbot in constitution\" -Number 3 -ShortName \"rag-chatbot-integration\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/create-new-feature.ps1\" -Json -ShortName \"rag-chatbot-integration\" -Number 3 -FeatureDescription \"update in docasuaurus texbook  for RAG chatbot in constitution\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/update-agent-context.ps1\" -AgentType claude)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json -RequireTasks -IncludeTasks)"
     ]
   }
 }

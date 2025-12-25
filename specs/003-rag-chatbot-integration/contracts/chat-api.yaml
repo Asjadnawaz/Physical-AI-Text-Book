@@ -1,0 +1,261 @@
+openapi: 3.0.0
+info:
+  title: RAG Chatbot API
+  description: API for the RAG Chatbot integration with the Physical AI & Humanoid Robotics textbook
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000/api/v1
+    description: Development server
+  - url: https://api.textbook-chatbot.com/v1
+    description: Production server
+
+paths:
+  /chat/start:
+    post:
+      summary: Start a new chat session
+      description: Creates a new chat session for a user to interact with the textbook content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page_url:
+                  type: string
+                  description: The URL of the textbook page where the chat is initiated
+                user_context:
+                  type: object
+                  description: Additional context about the user's current state
+                  properties:
+                    selected_text:
+                      type: string
+                      description: Text selected by the user on the page
+      responses:
+        '200':
+          description: Successfully created a new chat session
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  session_id:
+                    type: string
+                    description: Unique identifier for the created session
+                  message:
+                    type: string
+                    description: Welcome message for the chat session
+        '400':
+          description: Bad request with validation errors
+        '500':
+          description: Internal server error
+
+  /chat/{session_id}/message:
+    post:
+      summary: Send a message in the chat session
+      description: Sends a user message and receives an AI response based on textbook content
+      parameters:
+        - name: session_id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique identifier for the chat session
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - content
+              properties:
+                content:
+                  type: string
+                  description: The user's message/question
+                selected_text:
+                  type: string
+                  description: Text selected by the user on the textbook page (optional)
+      responses:
+        '200':
+          description: Successfully processed the message and returned AI response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: string
+                    description: The AI-generated response
+                  sources:
+                    type: array
+                    items:
+                      type: string
+                    description: Citations to textbook sections used in the response
+                  confidence:
+                    type: number
+                    format: float
+                    description: Confidence score of the response (0.0 to 1.0)
+        '400':
+          description: Bad request with validation errors
+        '404':
+          description: Session not found
+        '500':
+          description: Internal server error
+
+  /chat/{session_id}/history:
+    get:
+      summary: Get chat session history
+      description: Retrieves the message history for a specific chat session
+      parameters:
+        - name: session_id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique identifier for the chat session
+      responses:
+        '200':
+          description: Successfully retrieved chat history
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  messages:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        role:
+                          type: string
+                          enum: [user, assistant]
+                        content:
+                          type: string
+                        timestamp:
+                          type: string
+                          format: date-time
+                        sources:
+                          type: array
+                          items:
+                            type: string
+                          description: Citations for assistant messages
+        '404':
+          description: Session not found
+        '500':
+          description: Internal server error
+
+  /search:
+    post:
+      summary: Semantic search in textbook content
+      description: Performs semantic search on textbook content without starting a chat session
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - query
+              properties:
+                query:
+                  type: string
+                  description: The search query
+                max_results:
+                  type: integer
+                  default: 5
+                  description: Maximum number of results to return
+      responses:
+        '200':
+          description: Successfully found relevant content
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        content:
+                          type: string
+                          description: The retrieved content chunk
+                        page_path:
+                          type: string
+                          description: Path to the textbook page
+                        section_title:
+                          type: string
+                          description: Title of the section
+                        similarity_score:
+                          type: number
+                          format: float
+                          description: Similarity score (0.0 to 1.0)
+        '400':
+          description: Bad request with validation errors
+        '500':
+          description: Internal server error
+
+  /embeddings/chunk:
+    post:
+      summary: Process textbook content for embedding
+      description: Processes textbook content into chunks and stores embeddings for retrieval
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - page_path
+                - content
+              properties:
+                page_path:
+                  type: string
+                  description: Path to the textbook page
+                content:
+                  type: string
+                  description: The content to be processed
+                section_title:
+                  type: string
+                  description: Title of the section (optional)
+      responses:
+        '200':
+          description: Successfully processed and stored embeddings
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Confirmation message
+                  chunk_count:
+                    type: integer
+                    description: Number of chunks created
+        '400':
+          description: Bad request with validation errors
+        '500':
+          description: Internal server error
+
+components:
+  schemas:
+    ChatMessage:
+      type: object
+      properties:
+        role:
+          type: string
+          enum: [user, assistant]
+        content:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        sources:
+          type: array
+          items:
+            type: string
+      required:
+        - role
+        - content
+        - timestamp

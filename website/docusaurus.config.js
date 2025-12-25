@@ -55,6 +55,21 @@ const config = {
     ],
   ],
 
+  themes: [
+    // ... other themes
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          // Add redirects here if needed
+        ],
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
