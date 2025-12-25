@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ChatWindow from './ChatWindow';
 import ChatInput from './ChatInput';
+import TextSelectionHandler from '../TextSelection/TextSelectionHandler';
 import './ChatBot.css';
 
 const ChatBot = ({ pageUrl }) => {
@@ -99,6 +100,12 @@ const ChatBot = ({ pageUrl }) => {
 
   return (
     <div className="chatbot-container">
+      {/* Text selection handler to capture selected text from the page */}
+      <TextSelectionHandler onTextSelected={(text) => {
+        // This can be used to handle selected text if needed
+        console.log('Text selected:', text);
+      }} />
+
       {isOpen ? (
         <div className="chatbot-window">
           <div className="chatbot-header">

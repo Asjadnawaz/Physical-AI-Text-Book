@@ -153,7 +153,39 @@
 
 .chat-input-container {
   display: flex;
+  flex-direction: column;
   gap: 8px;
+}
+
+.selected-text-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f0f8ff;
+  border: 1px solid #cce5ff;
+  border-radius: 16px;
+  font-size: 12px;
+  color: #004085;
+}
+
+.clear-selection-btn {
+  background: none;
+  border: none;
+  color: #004085;
+  font-size: 16px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.clear-selection-btn:hover {
+  background: rgba(0, 64, 133, 0.1);
 }
 
 .chat-input {
