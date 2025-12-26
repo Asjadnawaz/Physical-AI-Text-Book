@@ -53,7 +53,11 @@
       "Bash(find website/docs -name \"*.md\" -exec grep -l \"exercises\\\\|references\" {} ;)",
       "Bash(git add .)",
       "Bash(git add website/docs/exercises.md website/docs/references.md website/docusaurus.config.js website/sidebars.js)",
-      "Bash(git commit -m \"Fix broken links by adding missing documentation files\n\n- Add exercises.md and references.md to resolve broken links\n- Update docusaurus.config.js to fix navigation link paths\n- Add new files to sidebar navigation\")"
+      "Bash(git commit -m \"Fix broken links by adding missing documentation files\n\n- Add exercises.md and references.md to resolve broken links\n- Update docusaurus.config.js to fix navigation link paths\n- Add new files to sidebar navigation\")",
+      "Bash(git push origin main)",
+      "Bash(git commit -m \"Add Vercel configuration to fix client-side routing issues\n\n- Add rewrite rules to handle client-side navigation properly\n- This should fix the 404 flickering issue when loading pages\")",
+      "Bash(git add website/docusaurus.config.js)",
+      "Bash(git commit -m \"Update Docusaurus config to improve routing stability\n\n- Add comments to explain trailingSlash setting\n- Enable last update time and author display for better UX\")"
     ]
   }
 }

@@ -61,7 +61,7 @@ Thumbs.db
 
 # Environment variables
 .env*
-!.env.example
+.env.example
 
 # IDE files
 .vscode/
