@@ -52,7 +52,8 @@
       "Bash(curl -s \"https://physical-ai-text-book-lovat.vercel.app/sitemap.xml\")",
       "Bash(find website/docs -name \"*.md\" -exec grep -l \"exercises\\\\|references\" {} ;)",
       "Bash(git add .)",
-      "Bash(git add website/docs/exercises.md website/docs/references.md website/docusaurus.config.js website/sidebars.js)"
+      "Bash(git add website/docs/exercises.md website/docs/references.md website/docusaurus.config.js website/sidebars.js)",
+      "Bash(git commit -m \"Fix broken links by adding missing documentation files\n\n- Add exercises.md and references.md to resolve broken links\n- Update docusaurus.config.js to fix navigation link paths\n- Add new files to sidebar navigation\")"
     ]
   }
 }
