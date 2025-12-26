@@ -1,0 +1,28 @@
+{
+  "id": "chapter-1/index",
+  "title": "Chapter 1: Foundations of Physical AI",
+  "description": "This chapter introduces the fundamental concepts of Physical AI and establishes the foundation for understanding more advanced topics in humanoid robotics. Physical AI represents a revolutionary approach to artificial intelligence that emphasizes the critical role of physical interaction in intelligent behavior. Unlike traditional AI systems that operate primarily in digital domains, Physical AI systems are designed to interact with and understand the physical world, navigating the complexities of physics, materials, and real-world dynamics.",
+  "source": "@site/docs/chapter-1/index.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/",
+  "permalink": "/docs/chapter-1/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_label": "Chapter 1: Foundations",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/intro"
+  },
+  "next": {
+    "title": "Chapter 1: Foundations",
+    "permalink": "/docs/chapter-1/"
+  }
+}

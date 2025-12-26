@@ -1,0 +1,24 @@
+{
+  "id": "about-textbook",
+  "title": "About This Textbook",
+  "description": "Physical AI & Humanoid Robotics: An Online Technical Textbook",
+  "source": "@site/docs/about-textbook.md",
+  "sourceDirName": ".",
+  "slug": "/about-textbook",
+  "permalink": "/docs/about-textbook",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/about-textbook.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "sidebar_label": "About This Textbook",
+    "sidebar_position": 0
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/intro"
+  }
+}

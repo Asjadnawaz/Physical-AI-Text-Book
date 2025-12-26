@@ -31,7 +31,7 @@ website/build/
 website/dist/
 
 # Docusaurus cache
-website/.docusaurus/
+
 
 # Logs
 *.log

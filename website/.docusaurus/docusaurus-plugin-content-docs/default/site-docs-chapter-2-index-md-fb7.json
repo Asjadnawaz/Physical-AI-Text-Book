@@ -1,0 +1,28 @@
+{
+  "id": "chapter-2/index",
+  "title": "Chapter 2: Core Concepts in Humanoid Robotics",
+  "description": "This chapter explores the fundamental concepts that underpin humanoid robotics, building on the Physical AI foundations established in Chapter 1. Humanoid robotics represents one of the most ambitious and challenging areas of robotics research, seeking to create machines that not only function effectively in human environments but also embody human-like characteristics in form, behavior, and interaction. The field combines insights from robotics, biomechanics, cognitive science, and human factors engineering to create artificial systems that bridge the gap between machines and humans.",
+  "source": "@site/docs/chapter-2/index.md",
+  "sourceDirName": "chapter-2",
+  "slug": "/chapter-2/",
+  "permalink": "/docs/chapter-2/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_label": "Chapter 2: Core Concepts in Humanoid Robotics",
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Section 3: Physical AI vs Traditional AI",
+    "permalink": "/docs/chapter-1/section-3"
+  },
+  "next": {
+    "title": "Chapter 2: Core Concepts in Humanoid Robotics",
+    "permalink": "/docs/chapter-2/"
+  }
+}

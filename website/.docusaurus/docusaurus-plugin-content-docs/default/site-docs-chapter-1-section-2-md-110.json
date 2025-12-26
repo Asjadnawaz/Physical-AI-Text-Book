@@ -1,0 +1,28 @@
+{
+  "id": "chapter-1/section-2",
+  "title": "Section 2: Applications and Examples of Physical AI",
+  "description": "This section explores practical applications of Physical AI principles through real-world examples and case studies. Physical AI has found numerous applications across diverse domains, from robotics and manufacturing to healthcare and autonomous systems. The integration of physical understanding with artificial intelligence has enabled systems that can interact meaningfully with the physical world, demonstrating capabilities that were previously impossible with purely computational approaches.",
+  "source": "@site/docs/chapter-1/section-2.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/section-2",
+  "permalink": "/docs/chapter-1/section-2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/section-2.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_label": "Section 2: Applications and Examples",
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Section 1: Core Principles",
+    "permalink": "/docs/chapter-1/section-1"
+  },
+  "next": {
+    "title": "Section 3: Physical AI vs Traditional AI",
+    "permalink": "/docs/chapter-1/section-3"
+  }
+}

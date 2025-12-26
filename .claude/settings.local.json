@@ -50,7 +50,8 @@
       "Bash(curl -L -I \"https://physical-ai-text-book-lovat.vercel.app/docs/chapter-1\")",
       "Bash(curl -L -I \"https://physical-ai-text-book-lovat.vercel.app/\")",
       "Bash(curl -s \"https://physical-ai-text-book-lovat.vercel.app/sitemap.xml\")",
-      "Bash(find website/docs -name \"*.md\" -exec grep -l \"exercises\\\\|references\" {} ;)"
+      "Bash(find website/docs -name \"*.md\" -exec grep -l \"exercises\\\\|references\" {} ;)",
+      "Bash(git add .)"
     ]
   }
 }

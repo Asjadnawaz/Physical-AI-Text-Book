@@ -1,0 +1,24 @@
+{
+  "id": "chapter-3/section-1",
+  "title": "Section 1: Dynamic Balance Control",
+  "description": "This section delves into the complex algorithms and control systems required to maintain balance in dynamic humanoid robots. Dynamic balance control represents one of the most challenging aspects of humanoid robotics, requiring sophisticated understanding of physics, control theory, and real-time systems. Unlike static structures that maintain equilibrium through passive means, humanoid robots must continuously adjust their configuration and apply active control to maintain stability while performing complex movements.",
+  "source": "@site/docs/chapter-3/section-1.md",
+  "sourceDirName": "chapter-3",
+  "slug": "/chapter-3/section-1",
+  "permalink": "/docs/chapter-3/section-1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/section-1.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "sidebar_label": "Section 1: Dynamic Balance Control",
+    "sidebar_position": 9
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 3: Locomotion and Movement",
+    "permalink": "/docs/chapter-3/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "chapter-3/index",
+  "title": "Chapter 3: Locomotion and Movement",
+  "description": "This chapter examines the complex challenges of enabling humanoid robots to move effectively in the physical world, covering both theoretical foundations and practical implementation approaches. Locomotion and movement represent some of the most challenging aspects of humanoid robotics, requiring sophisticated understanding of biomechanics, control theory, and dynamic systems. The ability to move effectively in diverse environments while maintaining stability is fundamental to the success of humanoid robots in practical applications.",
+  "source": "@site/docs/chapter-3/index.md",
+  "sourceDirName": "chapter-3",
+  "slug": "/chapter-3/",
+  "permalink": "/docs/chapter-3/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "sidebar_label": "Chapter 3: Locomotion and Movement",
+    "sidebar_position": 8
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Section 1: Humanoid Design Principles",
+    "permalink": "/docs/chapter-2/section-1"
+  },
+  "next": {
+    "title": "Chapter 3: Locomotion and Movement",
+    "permalink": "/docs/chapter-3/"
+  }
+}

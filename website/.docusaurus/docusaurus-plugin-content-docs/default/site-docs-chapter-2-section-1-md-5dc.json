@@ -1,0 +1,28 @@
+{
+  "id": "chapter-2/section-1",
+  "title": "Section 1: Humanoid Design Principles",
+  "description": "This section explores the fundamental design principles that guide the creation of humanoid robots. The design of humanoid robots represents one of the most complex challenges in robotics engineering, requiring integration of mechanical, electrical, and software systems to create machines that can effectively operate in human environments while exhibiting human-like characteristics. The success of humanoid robots depends critically on careful attention to design principles that balance anthropomorphic features with functional requirements, ensuring that the human-like form serves practical purposes rather than being purely aesthetic.",
+  "source": "@site/docs/chapter-2/section-1.md",
+  "sourceDirName": "chapter-2",
+  "slug": "/chapter-2/section-1",
+  "permalink": "/docs/chapter-2/section-1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/section-1.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_label": "Section 1: Humanoid Design Principles",
+    "sidebar_position": 6
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 2: Core Concepts in Humanoid Robotics",
+    "permalink": "/docs/chapter-2/"
+  },
+  "next": {
+    "title": "Chapter 3: Locomotion and Movement",
+    "permalink": "/docs/chapter-3/"
+  }
+}

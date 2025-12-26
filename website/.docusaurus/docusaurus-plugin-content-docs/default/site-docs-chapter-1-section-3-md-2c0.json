@@ -1,0 +1,28 @@
+{
+  "id": "chapter-1/section-3",
+  "title": "Section 3: Physical AI vs Traditional AI",
+  "description": "This section contrasts Physical AI with traditional AI approaches to highlight the unique characteristics and advantages of physical interaction in intelligent systems. The comparison between Physical AI and traditional AI approaches reveals fundamental differences in philosophy, methodology, and application that have profound implications for the development of artificial intelligence systems. Understanding these differences is crucial for appreciating the unique contributions and challenges of Physical AI, as well as recognizing the complementary roles that both approaches can play in advancing the field of artificial intelligence.",
+  "source": "@site/docs/chapter-1/section-3.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/section-3",
+  "permalink": "/docs/chapter-1/section-3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/section-3.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_label": "Section 3: Physical AI vs Traditional AI",
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Section 2: Applications and Examples",
+    "permalink": "/docs/chapter-1/section-2"
+  },
+  "next": {
+    "title": "Chapter 2: Core Concepts in Humanoid Robotics",
+    "permalink": "/docs/chapter-2/"
+  }
+}

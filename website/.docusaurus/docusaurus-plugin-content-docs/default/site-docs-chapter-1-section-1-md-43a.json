@@ -1,0 +1,28 @@
+{
+  "id": "chapter-1/section-1",
+  "title": "Section 1: Core Principles of Physical AI",
+  "description": "This section delves deeper into the core principles that govern Physical AI systems. Understanding these fundamental principles is essential for developing effective Physical AI systems that can interact meaningfully with the physical world. The core principles of Physical AI represent a departure from traditional AI approaches that treat intelligence as purely computational. Instead, Physical AI recognizes that intelligence emerges from the dynamic interaction between an agent and its physical environment, with the physical form playing a crucial role in cognitive processes.",
+  "source": "@site/docs/chapter-1/section-1.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/section-1",
+  "permalink": "/docs/chapter-1/section-1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/section-1.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_label": "Section 1: Core Principles",
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 1: Foundations",
+    "permalink": "/docs/chapter-1/"
+  },
+  "next": {
+    "title": "Section 2: Applications and Examples",
+    "permalink": "/docs/chapter-1/section-2"
+  }
+}
