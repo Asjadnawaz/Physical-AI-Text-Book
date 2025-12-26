@@ -14,6 +14,8 @@ class Message(BaseModel):
     timestamp: datetime
     sources: List[str] = []
     selected_text: Optional[str] = None
+    citations: List[dict] = []
+    retrieved_chunks: List[str] = []
 
     class Config:
         # Allow the model to work properly with datetime objects

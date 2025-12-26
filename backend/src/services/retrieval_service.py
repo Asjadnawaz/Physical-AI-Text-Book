@@ -86,22 +86,36 @@ class RetrievalService:
             with_payload=True
         )
 
-        # Convert results to RetrievedChunk objects
+        # Convert results to RetrievedChunk objects and apply validation/filtering
         retrieved_chunks = []
         for result in search_results:
             payload = result.payload
+
+            # Basic validation: ensure content is meaningful
+            content = payload.get("content", "")
+            if not content or len(content.strip()) < 10:  # Skip very short or empty content
+                continue
+
+            # Filter based on similarity score threshold (e.g., only return results with score > 0.1)
+            similarity_score = float(result.score)
+            if similarity_score < 0.1:  # Minimum relevance threshold
+                continue
+
             chunk = RetrievedChunk(
                 id=result.id,
                 textbook_page=payload.get("page_path", ""),
-                content=payload.get("content", ""),
+                content=content,
                 embedding=[],  # We don't need the full embedding in the response
-                similarity_score=float(result.score),  # Cosine similarity score
+                similarity_score=similarity_score,
                 metadata={
                     "section_title": payload.get("section_title", ""),
                     "content_id": payload.get("content_id", "")
                 }
             )
             retrieved_chunks.append(chunk)
+
+        # Sort by similarity score in descending order
+        retrieved_chunks.sort(key=lambda x: x.similarity_score, reverse=True)
 
         return retrieved_chunks
 

@@ -16,7 +16,22 @@
       "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/create-new-feature.ps1\" -Json -ShortName \"rag-chatbot-integration\" -Number 3 -FeatureDescription \"update in docasuaurus texbook  for RAG chatbot in constitution\")",
       "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/update-agent-context.ps1\" -AgentType claude)",
       "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json)",
-      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json -RequireTasks -IncludeTasks)"
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json -RequireTasks -IncludeTasks)",
+      "Bash(chmod +x deploy.sh)",
+      "Bash(rm -rf website/src/components/ChatBot)",
+      "Bash(rm -rf website/src/components/TextSelection)",
+      "Bash(rm website/src/components/Root.js)",
+      "Bash(rm website/src/theme/Root.js)",
+      "Bash(rm website/src/hooks/useChat.js)",
+      "Bash(rm website/src/services/chat-api.js)",
+      "Bash(rm -f website/static/js/text-selection.js)",
+      "Bash(rm -f website/src/services/session-storage.js)",
+      "Bash(rm -rf website/src/components/ChatBot/)",
+      "Bash(rm -rf website/src/components/TextSelection/)",
+      "Bash(rm -f website/src/components/Root.js)",
+      "Bash(rm -f website/src/theme/Root.js)",
+      "Bash(rm -f website/src/hooks/useChat.js)",
+      "Bash(rm -f website/src/services/chat-api.js)"
     ]
   }
 }
