@@ -4,6 +4,9 @@ embedding_pipeline.egg-info/SOURCES.txt
 embedding_pipeline.egg-info/dependency_links.txt
 embedding_pipeline.egg-info/requires.txt
 embedding_pipeline.egg-info/top_level.txt
+src/check_all_routes.py
+src/explore_website.py
+src/load_textbook_content.py
 src/main.py
 tests/test_chat_service.py
 tests/test_embedding_service.py

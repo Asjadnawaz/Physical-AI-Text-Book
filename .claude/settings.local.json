@@ -57,7 +57,10 @@
       "Bash(git push origin main)",
       "Bash(git commit -m \"Add Vercel configuration to fix client-side routing issues\n\n- Add rewrite rules to handle client-side navigation properly\n- This should fix the 404 flickering issue when loading pages\")",
       "Bash(git add website/docusaurus.config.js)",
-      "Bash(git commit -m \"Update Docusaurus config to improve routing stability\n\n- Add comments to explain trailingSlash setting\n- Enable last update time and author display for better UX\")"
+      "Bash(git commit -m \"Update Docusaurus config to improve routing stability\n\n- Add comments to explain trailingSlash setting\n- Enable last update time and author display for better UX\")",
+      "Bash(git commit -m \"Move vercel.json to website directory for proper deployment configuration\n\n- Vercel configuration now in website directory where deployment occurs\n- This should properly handle client-side routing for Docusaurus app\")",
+      "Bash(git add website/vercel.json)",
+      "Bash(git commit -m \"Fix Vercel configuration for Docusaurus SPA routing\n\n- Simplify rewrite rules to properly handle client-side navigation\n- Use single catch-all rule to direct all routes to index.html\n- This should eliminate 404 flickering on page loads\")"
     ]
   }
 }
