@@ -129,8 +129,8 @@ const config = {
             title: 'Resources',
             items: [
               {
-                label: 'Exercises (Coming Soon)',
-                to: '/exercises',
+                label: 'Exercises',
+                to: '/docs/exercises',
               },
               {
                 label: 'Glossary',
