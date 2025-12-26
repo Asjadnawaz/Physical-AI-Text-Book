@@ -18,7 +18,7 @@ const config = {
   baseUrl: '/',
 
   // For GitHub pages deployment, you need this to point to your GitHub repository
-  trailingSlash: false,
+  trailingSlash: false, // Set to false to avoid trailing slash issues
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -47,6 +47,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         },
         blog: false, // Optional: disable the blog plugin
         theme: {
