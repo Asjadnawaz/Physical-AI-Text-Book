@@ -32,7 +32,24 @@
       "Bash(rm -f website/src/theme/Root.js)",
       "Bash(rm -f website/src/hooks/useChat.js)",
       "Bash(rm -f website/src/services/chat-api.js)",
-      "Bash(cat \"C:\\\\Users\\\\Dell\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--GIAIC-Prompt-Enginnering-BookAIDD\\\\tasks\\\\bc00eb9.output\")"
+      "Bash(cat \"C:\\\\Users\\\\Dell\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--GIAIC-Prompt-Enginnering-BookAIDD\\\\tasks\\\\bc00eb9.output\")",
+      "Bash(git fetch --all --prune)",
+      "Bash(ls -d specs/*/)",
+      "Bash(.specify/scripts/powershell/create-new-feature.ps1 -Json \"Embedding and Vectorization Pipeline for Book Content \\(RAG Chatbot\\)\n\nTarget audience:\nBackend engineers and AI system developers integrating a RAG chatbot with a Docusaurus-based book website\n\nFocus:\n- Crawling deployed book URLs\n- Extracting clean, structured text content\n- Generating semantic embeddings using Cohere models\n- Persisting embeddings in Qdrant vector database for retrieval\" -Json -Number 4 -ShortName \"embedding-pipeline\")",
+      "Bash(.specify/scripts/bash/create-new-feature.sh \"Embedding and Vectorization Pipeline for Book Content \\(RAG Chatbot\\)\n\nTarget audience:\nBackend engineers and AI system developers integrating a RAG chatbot with a Docusaurus-based book website\n\nFocus:\n- Crawling deployed book URLs\n- Extracting clean, structured text content\n- Generating semantic embeddings using Cohere models\n- Persisting embeddings in Qdrant vector database for retrieval\" --number 4 --short-name \"embedding-pipeline\")",
+      "Bash(git checkout -b 4-embedding-pipeline)",
+      "Bash(uv init)",
+      "Bash(uv sync)",
+      "Bash(uv run src/main.py)",
+      "Bash(cat .env.example)",
+      "Bash(python src/load_textbook_content.py)",
+      "Bash(uv run src/load_textbook_content.py)",
+      "Bash(uv run src/explore_website.py)",
+      "Bash(curl -I \"https://physical-ai-text-book-lovat.vercel.app/docs/chapter-1/section-1\")",
+      "Bash(curl -L -I \"https://physical-ai-text-book-lovat.vercel.app/docs/chapter-1/section-1\")",
+      "Bash(curl -L -I \"https://physical-ai-text-book-lovat.vercel.app/docs/chapter-1\")",
+      "Bash(curl -L -I \"https://physical-ai-text-book-lovat.vercel.app/\")",
+      "Bash(curl -s \"https://physical-ai-text-book-lovat.vercel.app/sitemap.xml\")"
     ]
   }
 }

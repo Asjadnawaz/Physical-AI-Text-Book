@@ -1,0 +1,11 @@
+pyproject.toml
+embedding_pipeline.egg-info/PKG-INFO
+embedding_pipeline.egg-info/SOURCES.txt
+embedding_pipeline.egg-info/dependency_links.txt
+embedding_pipeline.egg-info/requires.txt
+embedding_pipeline.egg-info/top_level.txt
+src/main.py
+tests/test_chat_service.py
+tests/test_embedding_service.py
+tests/test_integration.py
+tests/test_retrieval_service.py

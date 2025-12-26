@@ -54,6 +54,15 @@ const sidebars = {
         type: 'doc',
         id: 'chapter-3/index',
       }
+    },
+    {
+      type: 'category',
+      label: 'Resources',
+      items: [
+        'glossary',
+        'references',
+        'exercises'
+      ]
     }
     // Additional chapters will be added as they are created
   ],
