@@ -31,7 +31,8 @@
       "Bash(rm -f website/src/components/Root.js)",
       "Bash(rm -f website/src/theme/Root.js)",
       "Bash(rm -f website/src/hooks/useChat.js)",
-      "Bash(rm -f website/src/services/chat-api.js)"
+      "Bash(rm -f website/src/services/chat-api.js)",
+      "Bash(cat \"C:\\\\Users\\\\Dell\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--GIAIC-Prompt-Enginnering-BookAIDD\\\\tasks\\\\bc00eb9.output\")"
     ]
   }
 }
